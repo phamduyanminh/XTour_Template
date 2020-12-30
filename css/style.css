@@ -10,3 +10,112 @@ Dark green: #28b485
     padding: 0;
     box-sizing: border-box;
 }
+
+body{
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.7;
+    color: #777;
+    padding: 30px;
+}
+
+
+/*
+*Header Starts Here
+*/
+.header{
+    height: 90vh;
+    background-image: linear-gradient(
+        to right top, 
+        rgba(52, 80, 240, 0.5),
+        rgba(40, 180, 131, 0.7)), 
+        url(../img/header-bg-img.jpg);
+    background-size: cover;
+    background-position: top;
+    position: relative;
+    clip-path: polygon(0 0, 100% 0, 100% 75%, 0% 100%);
+}
+
+.logo-box{
+    position: absolute;
+    top: 30px;
+    left: 30px;
+}
+
+.logo{
+    height: 30px;
+}
+
+.text-box{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-45%, -40%);
+}
+
+.heading-primary{
+    color: #fff; /*#dfecff*/
+    text-transform: uppercase;
+}
+
+.heading-primary-main{
+    display: block;
+    text-align: center;
+    font-size: 70px;
+    font-weight: 500;
+    letter-spacing: 25px;
+
+    animation-name: moveInLeft;
+    animation-duration: 1.7s;
+    animation-delay: 0.5s;
+}
+
+.heading-primary-sub{
+    display: block;
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 6px;
+
+    animation-name: moveInRight;
+    animation-duration: 1.7s;
+    animation-delay: 0.5s;
+    animation-timing-function: ease-in-out;
+}
+
+/*Animation for Header's Text*/
+@keyframes moveInLeft{
+    0%{
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+
+    80%{
+        transform: translateX(10px);
+    }
+
+    100%{
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+@keyframes moveInRight{
+    0%{
+        opacity: 0;
+        transform: translateX(100px);
+    }
+
+    80%{
+        transform: translateX(-5px);
+    }
+
+    100%{
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+/*
+*Header Ends Here
+*/
